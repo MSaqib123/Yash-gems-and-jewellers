@@ -1,0 +1,91 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@section Styles4{
+    <style type="text/css">
+        .divider:after,
+        .divider:before {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: #eee;
+        }
+    </style>
+}
+
+<br />
+<br>
+<br>
+@model OnlineStoreForJewellery.ViewModel.RegisterViewModel
+<section class="vh-100">
+    <div class="container py-5 h-100">
+        <div class="row d-flex align-items-center justify-content-center h-100">
+            <div class="col-md-8 col-lg-7 col-xl-6">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
+                     class="img-fluid" alt="Phone image">
+            </div>
+            <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+                <form method="post">
+
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="form-outline">
+                                <input asp-for="FirstName" type="text" id="FirstName" class="form-control" />
+                                <label class="form-label" asp-for="FirstName">First name</label>
+                                <span asp-validation-for="FirstName" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="form-outline">
+                                <input asp-for="LastName" type="text" id="LastName" class="form-control" />
+                                <label class="form-label" asp-for="LastName">Last name</label>
+                                <span asp-validation-for="LastName" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                  
+
+                    <!-- Email input -->
+                    <div class="form-outline mb-4">
+                        <input asp-for="Email" type="email" id="Email" class="form-control form-control-lg" />
+                        <label class="form-label" asp-for="Email">Email address</label>
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+
+                    <!-- Password input -->
+                    <div class="form-outline mb-4">
+                        <input asp-for="Password" type="password" id="Password" class="form-control form-control-lg" />
+                        <label class="form-label" asp-for="Password">Password</label>
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+
+                    <!-- Confirm Password input -->
+                    <div class="form-outline mb-4">
+                        <input asp-for="ConfirmPassword" type="password" id="ConfirmPassword" class="form-control form-control-lg" />
+                        <label class="form-label" asp-for="ConfirmPassword">Confirm Password</label>
+                        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                    </div>
+
+
+                    <!-- Submit button -->
+                    <button type="submit" class="btn btn-primary btn-lg btn-block" style="background-color: #87413f ">Signup</button>
+
+                    <div class="divider d-flex align-items-center my-4">
+                        <p class="text-center fw-bold mx-3 mb-0 text-muted">OR</p>
+                    </div>
+
+                    <a class="btn btn-primary btn-lg btn-block" style="background-color: #87413f" href="#!"
+                       role="button">
+                        <i class="fa fa-facebook me-2"></i>  SignUp with Facebook
+                    </a>
+                    <a class="btn btn-primary btn-lg btn-block" style="background-color: #87413f " href="#!"
+                       role="button">
+                        <i class="fa fa-google me-2"></i>  SignUp with Google
+                    </a>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

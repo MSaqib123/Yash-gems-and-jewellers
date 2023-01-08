@@ -1,0 +1,105 @@
+﻿@model OnlineStoreForJewellery.ViewModel.ShoppingCartVM
+@using Microsoft.Extensions.Options
+<br />
+<br>
+<br>
+
+@{
+    ViewData["Title"] = "Payment";
+}
+<br />
+<br />
+<br />
+<br />
+<br />
+<div class="page-title-overlap bg-dark pt-4">
+    <div class="container d-lg-flex justify-content-between py-2 py-lg-3" style="background-color: #87413f ">
+
+        <div class="order-lg-1 pe-lg-4 text-center text-lg-start">
+            <h1 class="h3 text-light mb-0">Payment</h1>
+        </div>
+    </div>
+</div>
+<div class="container pb-5 mb-2 mb-md-4">
+    <div class="row">
+        <section class="col-lg-8">
+            <h2 class="h6 pb-3 mb-2">Choose payment method</h2>
+            <div class="accordion mb-2" id="payment-method">
+                <div class="accordion-item">
+                    <h3 class="accordion-header"><a style="color: #87413f " class="accordion-button" href="#card" data-bs-toggle="collapse"><i class="ci-card fs-lg me-2 mt-n1 align-middle"></i>Pay with Credit Card</a></h3>
+                    <div class="accordion-collapse collapse show" id="card" data-bs-parent="#payment-method">
+                        <div class="accordion-body">
+                            <p class="fs-sm">We accept following credit cards:&nbsp;&nbsp;<img class="d-inline-block align-middle" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6O0Elq2OYER06e5mSplBDsAqib0vMHGYEFA&usqp=CAU" width="187" alt="Credit Cards"></p>
+                            <div class="credit-card-wrapper"></div>
+                            <form class="credit-card-form row">
+                                <div class="mb-3 col-sm-6">
+                                    <input class="form-control" type="text" name="number" placeholder="Card Number" required>
+                                </div>
+                                <div class="mb-3 col-sm-6">
+                                    <input class="form-control" type="text" name="name" placeholder="Full Name" required>
+                                </div>
+                                <div class="mb-3 col-sm-3">
+                                    <input class="form-control" type="text" name="expiry" placeholder="MM/YY" required>
+                                </div>
+                                <div class="mb-3 col-sm-3">
+                                    <input class="form-control" type="text" name="cvc" placeholder="CVC" required>
+                                </div>
+                                <div class="col-sm-6">
+                                    <button class="btn btn-outline-primary d-block w-100 mt-0 text-white" style="background-color: #87413f " type="submit">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- Navigation (desktop)-->
+            <div class="d-none d-lg-flex pt-4">
+                <div class="w-50 pe-3"><a class="btn btn-secondary d-block w-100" style="background-color: #87413f " asp-area="Cart" asp-controller="Cart" asp-action="Checkout"><i class="ci-arrow-left mt-sm-0 me-1"></i><span class="d-none d-sm-inline">Back to Checkout</span><span class="d-inline d-sm-none">Back</span></a></div>
+                <div class="w-50 ps-2"><a class="btn btn-primary d-block w-100" style="background-color: #87413f " href="checkout-review.html"><span class="d-none d-sm-inline">Review your order</span><span class="d-inline d-sm-none">Review order</span><i class="ci-arrow-right mt-sm-0 ms-1"></i></a></div>
+            </div>
+        </section>
+
+        <!-- Sidebar-->
+        <aside class="col-lg-4 pt-4 pt-lg-0 ps-xl-5">
+            <div class="bg-white rounded-3 shadow-lg p-4 ms-lg-auto">
+                <div class="py-2 px-xl-2">
+                    <div class="widget mb-3">
+                        <h2 class="widget-title text-center">Order summary</h2>
+
+                        <div class="d-flex align-items-center pb-2 border-bottom">
+                            <a class="d-block flex-shrink-0" href=""><img src="" width="64" alt="Product"></a>
+                            <div class="ps-2">
+                                <h6 class="widget-product-title"><a style="color: #87413f "></a></h6>
+                                <small class="text-muted">Quantity:</small>
+                                <div class="widget-product-meta"><span class="text-accent me-2"></span></div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <ul class="list-unstyled fs-sm pb-2 border-bottom">
+                    <li class="d-flex justify-content-between align-items-center"><span class="me-2">Subtotal:</span><span class="text-end">₹1040.<small>00</small></span></li>
+                </ul>
+                <h3 class="fw-normal text-center my-4"></h3>
+                <div class="card-footer">
+                    <div class="row">
+                        <div class="col-12 col-md-8 pt-2">
+                            <p style="color:maroon; font-size:14px;">
+                                Estimate Arrival Date:
+
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+    </div>
+    </aside>
+</div>
+</div>
+
+
